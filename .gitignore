@@ -7,6 +7,17 @@
 Thumbs.db
 ehthumbs.db
 ehthumbs_vista.db
+.DS_Store
+.idea
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime
+build/
+node_modules/
+npm-debug.*
+source/css/*.css
 
 # Dump file
 *.stackdump
