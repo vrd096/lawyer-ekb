@@ -7,6 +7,8 @@ let minify = require("gulp-csso");
 let rename = require("gulp-rename");
 let imagemin = require("gulp-imagemin");
 let webp = require("gulp-webp");
+let del = require("del");
+let server = require("browser-sync").create();
 
 
 
@@ -17,10 +19,10 @@ gulp.task("style", function() {
     .pipe(postcss([
         autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("source/css"));
+    .pipe(gulp.dest("build/css"));
 });
 
 gulp.task("images", function() {
@@ -37,4 +39,37 @@ gulp.task("webp", function(){
   return gulp.src("source/img/**/*.{png, jpg}")
   .pipe(webp({quality: 90}))
   .pipe(gulp.dest("source/img"));
+});
+
+gulp.task("copy", function() {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**"
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+});
+
+gulp.task("clean", function() {
+  return delete("build")
+});
+
+gulp.task("build", function(done) {
+  run(
+    "clean",
+    "copy",
+    "style",
+    done
+  );
+});
+
+gulp.task("serve", function(){
+  server.init({
+    server: "build/"
+  });
+
+  gulp.watch("source/less/**/*.less", ["style"]);
+  gulp.watch("source/*.html", ["html"]);
 });
