@@ -7,9 +7,13 @@
     "del": "^5.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-less": "^4.0.1",
@@ -17,11 +21,16 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sequence": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "node-sass": "^4.13.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
   },
   "repository": {
     "type": "git",
