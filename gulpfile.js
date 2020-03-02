@@ -1,5 +1,5 @@
 let gulp = require("gulp");
-let less = require("gulp-less");
+let sass = require("gulp-sass");
 let plumber = require("gulp-plumber");
 let postcss = require("gulp-postcss");
 let autoprefixer = require("autoprefixer");
@@ -13,16 +13,17 @@ let server = require("browser-sync").create();
 
 
 gulp.task("style", function() {
-    gulp.src("source/less/style.less")
+    gulp.src("source/sass/style.sccs")
     .pipe(plumber())
-    .pipe(less())
+    .pipe(sass())
     .pipe(postcss([
         autoprefixer()
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 gulp.task("images", function() {
@@ -53,8 +54,9 @@ gulp.task("copy", function() {
 });
 
 gulp.task("clean", function() {
-  return delete("build")
+  return del("build");
 });
+
 
 gulp.task("build", function(done) {
   run(
@@ -70,6 +72,6 @@ gulp.task("serve", function(){
     server: "build/"
   });
 
-  gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("source/*.html", ["html"]);
+  gulp.watch("source/sass/**/*.sccs", ["style"]);
+  gulp.watch("source/*.html").on("change", server.reload);
 });
