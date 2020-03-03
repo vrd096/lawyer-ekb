@@ -28,6 +28,13 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
+function html() {
+  return gulp
+    .src("source/*.html")
+    .pipe(gulp.dest("build/"))
+    .pipe(browserSync.stream());
+}
+
 function scripts() {
   return gulp
     .src("source/js/**/*.js")
@@ -48,29 +55,29 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
-// gulp.task("images", function() {
-//   return gulp
-//     .src("source/img/**/*.{png,jpg,svg}")
-//     .pipe(
-//       imagemin([
-//         imagemin.optipng({ optimizationLevel: 3 }),
-//         imagemin.jpegtran({ progressive: true }),
-//         imagemin.svgo()
-//       ])
-//     )
-//     .pipe(gulp.dest("source/img"));
-// });
+function images() {
+  return gulp
+    .src("source/img/**/*.{png,jpg,svg}")
+    .pipe(
+      imagemin([
+        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.mozjpeg({ progressive: true }),
+        imagemin.svgo()
+      ])
+    )
+    .pipe(gulp.dest("source/img"));
+}
 
-// gulp.task("webp", function() {
-//   return gulp
-//     .src("source/img/**/*.{png, jpg}")
-//     .pipe(webp({ quality: 90 }))
-//     .pipe(gulp.dest("source/img"));
-// });
+function imgToWebp() {
+  return gulp
+    .src("source/img/**/*.{png, jpg}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("source/img"));
+}
 
 function copy() {
   return gulp
-    .src(["source/*.html, source/fonts/**/*.{woff,woff2}", "source/img/**", "source/js/**"], {
+    .src(["source/fonts/**/*.{woff,woff2}", "source/img/**", "source/js/**"], {
       base: "source"
     })
     .pipe(gulp.dest("build"));
@@ -82,21 +89,27 @@ function clean() {
 
 function watch() {
   browserSync.init({
-    server: "source/"
+    server: "build/"
   });
 
   gulp.watch("source/sass/**/*.scss", styles);
   gulp.watch("source/js/**/*.js", scripts);
-  gulp.watch("source/*.html").on("change", browserSync.reload);
+  gulp.watch("source/*.html", html);
+  gulp.watch("source/sass/**/*.scss").on("change", browserSync.reload);
 }
 
 gulp.task("styles", styles);
 gulp.task("scripts", scripts);
 gulp.task("watch", watch);
-gulp.task("build", gulp.series(clean, copy, gulp.parallel(styles, scripts)));
-
-// gulp.task(
-//   "build",
-//   gulp.series(["clean"], gulp.parallel(["style"], ["scripts"]))
-// );
-gulp.task("dev", gulp.series("build", "watch"));
+gulp.task("clean", clean);
+gulp.task(
+  "build",
+  gulp.series(
+    clean,
+    images,
+    imgToWebp,
+    copy,
+    gulp.parallel(html, styles, scripts)
+  )
+);
+gulp.task("start", gulp.series("build", "watch"));
