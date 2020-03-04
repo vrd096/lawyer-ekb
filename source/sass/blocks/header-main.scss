@@ -35,7 +35,7 @@
   }
   .nav__toggle-burger {
     position: absolute;
-    width: 40px;
+    width: 25px;
     height: 3px;
     background-color: #000;
     font-size: 0;
@@ -44,15 +44,15 @@
     content: "";
     position: absolute;
     left: 0;
-    width: 40px;
+    width: 25px;
     height: 3px;
     background-color: #000;
   }
   .nav__toggle-burger::before {
-    top: -450%;
+    top: -9px;
   }
   .nav__toggle-burger::after {
-    top: 450%;
+    top: 9px;
   }
   .nav__toggle-burger--opened .nav__toggle-burger {
     width: 0;
