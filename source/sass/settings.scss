@@ -1,4 +1,76 @@
-* {
-  font-family: 'Playfair Display', "Arial", serif;
-  color: green;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", Tahoma, Geneva, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #666;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media (min-width: 320px) {
+  .wrapper {
+    width: auto;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: auto;
+    padding: 0 64px;
+  }
+}
+
+@media (min-width: 1088px) {
+  .wrapper {
+    max-width: 1170px;
+    padding: 0;
+    margin: 0 auto;
+  }
 }
