@@ -19,7 +19,6 @@ function styles() {
     .src("source/sass/**/*.scss")
     .pipe(plumber())
     .pipe(sass())
-    .pipe(concat("style.css"))
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
@@ -55,18 +54,18 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
-function images() {
-  return gulp
-    .src("source/img/**/*.{png,jpg,svg}")
-    .pipe(
-      imagemin([
-        imagemin.optipng({ optimizationLevel: 3 }),
-        imagemin.mozjpeg({ progressive: true }),
-        imagemin.svgo()
-      ])
-    )
-    .pipe(gulp.dest("source/img"));
-}
+// function images() {
+//   return gulp
+//     .src("source/img/**/*.{png,jpg,svg}")
+//     .pipe(
+//       imagemin([
+//         imagemin.optipng({ optimizationLevel: 3 }),
+//         imagemin.mozjpeg({ progressive: true }),
+//         imagemin.svgo()
+//       ])
+//     )
+//     .pipe(gulp.dest("source/img"));
+// }
 
 function imgToWebp() {
   return gulp
@@ -106,7 +105,6 @@ gulp.task(
   "build",
   gulp.series(
     clean,
-    images,
     imgToWebp,
     copy,
     gulp.parallel(html, styles, scripts)
