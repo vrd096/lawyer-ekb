@@ -1,3 +1,5 @@
+@import "../variables.scss";
+
 @media (min-width: 320px) {
   .header {
     padding-top: 25px;
@@ -40,6 +42,91 @@
     cursor: pointer;
     outline: none;
   }
+  @keyframes hideBurger {
+    0% {
+      background-color: #000;
+      transform: scale(0.9);
+    }
+    30% {
+      transform: scale(0.9);
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+
+  @keyframes openBurgerOne {
+    0% {
+      top: -10px;
+      transform: rotate(0);
+    }
+    30% {
+      top: 0;
+      transform: rotate(0) scale(0.9);
+    }
+    70% {
+      top: 0;
+      transform: rotate(0) scale(0.9);
+    }
+    100% {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+  @keyframes openBurgerTwo {
+    0% {
+      top: 10px;
+      transform: rotate(0);
+    }
+    30% {
+      top: 0;
+      transform: rotate(0) scale(0.9);
+    }
+    70% {
+      top: 0;
+      transform: rotate(0) scale(0.9);
+    }
+    100% {
+      top: 0;
+      transform: rotate(45deg);
+    }
+  }
+  @keyframes closeBurgerOne {
+    0% {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+    30% {
+      top: 0;
+      transform: rotate(0) scale(1);
+    }
+    70% {
+      top: 0;
+      transform: rotate(0) scale(1);
+    }
+    100% {
+      top: -10px;
+      transform: rotate(0);
+    }
+  }
+  @keyframes closeBurgerTwo {
+    0% {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    30% {
+      top: 0;
+      transform: rotate(0) scale(1);
+    }
+    70% {
+      top: 0;
+      transform: rotate(0) scale(1);
+    }
+    100% {
+      top: 10px;
+      transform: rotate(0);
+    }
+  }
   .nav__toggle-burger {
     position: absolute;
     width: 25px;
@@ -57,20 +144,30 @@
     background-color: #000;
   }
   .nav__toggle-burger::before {
-    top: -9px;
+    top: -10px;
   }
   .nav__toggle-burger::after {
-    top: 9px;
+    top: 10px;
   }
   .nav__toggle-burger--opened .nav__toggle-burger {
-    width: 0;
+    animation-name: hideBurger;
+    animation-fill-mode: both;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
   }
   .nav__toggle-burger--opened .nav__toggle-burger::before {
-    transform: rotate(45deg);
-    top: 5%;
+    // transform: rotate(45deg);
+    // top: 5%;
+    animation-name: openBurgerOne;
+    animation-fill-mode: both;
+    animation-duration: 1s;
   }
   .nav__toggle-burger--opened .nav__toggle-burger::after {
-    transform: rotate(-45deg);
-    top: -5%;
+    // transform: rotate(-45deg);
+    // top: -5%;
+    animation-name: openBurgerTwo;
+    animation-fill-mode: both;
+    animation-duration: 1s;
   }
 }
