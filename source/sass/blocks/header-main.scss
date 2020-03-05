@@ -10,7 +10,7 @@
   }
 
   .nav__list {
-    display: block;
+    display: none;
     width: 100%;
     padding: 30px 15px 12px;
     border-top: 3px solid $gold;
@@ -23,6 +23,10 @@
     color: $white;
     text-transform: uppercase;
     border-bottom: 1px solid rgba( 255,255,255 , 0.15);
+  }
+  .nav__menu--opended {
+    display: block;
+    opacity: 1;
   }
     .nav__toggle {
     z-index: 10;
