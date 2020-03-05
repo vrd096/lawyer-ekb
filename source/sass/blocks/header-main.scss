@@ -18,17 +18,20 @@
   }
   .nav__item {
     padding: 15px 12px;
-    font-size: 13px;
-    font-weight: 700;
-    color: $white;
-    text-transform: uppercase;
-    border-bottom: 1px solid rgba( 255,255,255 , 0.15);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    a {
+      font-size: 13px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+    }
   }
   .nav__menu--opended {
     display: block;
     opacity: 1;
   }
-    .nav__toggle {
+  .nav__toggle {
     z-index: 10;
     width: 70px;
     height: 50px;
@@ -44,7 +47,8 @@
     background-color: #000;
     font-size: 0;
   }
-  .nav__toggle-burger::before, .nav__toggle-burger::after {
+  .nav__toggle-burger::before,
+  .nav__toggle-burger::after {
     content: "";
     position: absolute;
     left: 0;
