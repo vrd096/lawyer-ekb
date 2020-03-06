@@ -42,6 +42,12 @@
     border: none;
     cursor: pointer;
     outline: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .nav__toggle-burger {
@@ -50,6 +56,9 @@
     height: 3px;
     background-color: #000;
     font-size: 0;
+    &:active {
+      -webkit-tap-highlight-color: transparent;
+    }
     &::before,
     &::after {
       content: "";
@@ -70,7 +79,7 @@
   .nav__toggle-burger--opened .nav__toggle-burger {
     animation-name: hideBurger;
     animation-fill-mode: forwards;
-    animation-duration: 0.8s;
+    animation-duration: 0.7s;
     animation-timing-function: cubic-bezier(0,.81,1,-0.03);
     &::before {
       animation-name: openBurgerOne;
@@ -84,7 +93,7 @@
     }
   }
   .nav__toggle-burger--closed .nav__toggle-burger {
-    animation-name: hideBurger;
+    animation-name: showBurger;
     animation-duration: 0.8s;
     animation-timing-function: cubic-bezier(0,.81,1,-0.03);
     &::before {
