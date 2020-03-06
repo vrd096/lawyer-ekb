@@ -29,7 +29,7 @@
       text-transform: uppercase;
     }
   }
-  .nav__menu--opended {
+  .nav__menu--opened {
     display: block;
     opacity: 1;
   }
@@ -133,41 +133,62 @@
     height: 3px;
     background-color: #000;
     font-size: 0;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+    }
+    &::before {
+      top: -10px;
+    }
+    &::after {
+      top: 10px;
+    }
   }
-  .nav__toggle-burger::before,
-  .nav__toggle-burger::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 25px;
-    height: 3px;
-    background-color: #000;
-  }
-  .nav__toggle-burger::before {
-    top: -10px;
-  }
-  .nav__toggle-burger::after {
-    top: 10px;
-  }
+
   .nav__toggle-burger--opened .nav__toggle-burger {
     animation-name: hideBurger;
-    animation-fill-mode: both;
+    // animation-fill-mode: both;
     animation-duration: 0.8s;
     animation-timing-function: ease-in-out;
-    animation-direction: alternate;
+    animation-direction: forwards;
+    &::before {
+      // transform: rotate(45deg);
+      // top: 5%;
+      animation-name: openBurgerOne;
+      // animation-fill-mode: both;
+      animation-duration: 1s;
+    }
+    &::after {
+      // transform: rotate(-45deg);
+      // top: -5%;
+      animation-name: openBurgerTwo;
+      // animation-fill-mode: both;
+      animation-duration: 1s;
+    }
   }
-  .nav__toggle-burger--opened .nav__toggle-burger::before {
-    // transform: rotate(45deg);
-    // top: 5%;
-    animation-name: openBurgerOne;
-    animation-fill-mode: both;
-    animation-duration: 1s;
-  }
-  .nav__toggle-burger--opened .nav__toggle-burger::after {
-    // transform: rotate(-45deg);
-    // top: -5%;
-    animation-name: openBurgerTwo;
-    animation-fill-mode: both;
-    animation-duration: 1s;
+  .nav__toggle-burger--closed .nav__toggle-burger {
+    animation-name: hideBurger;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    // animation-fill-mode: both;
+    &::before {
+      // transform: rotate(45deg);
+      // top: 5%;
+      animation-name: closeBurgerOne;
+      animation-duration: 1s;
+      // animation-fill-mode: both;
+    }
+    &::after {
+      // transform: rotate(-45deg);
+      // top: -5%;
+      animation-name: closeBurgerTwo;
+      animation-duration: 1s;
+      // animation-fill-mode: both;
+    }
   }
 }
