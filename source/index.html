@@ -8,10 +8,10 @@
     <title>Адвокаты-Екб</title>
   </head>
   <body>
-    <header class="header">
+    <header class="main-header">
       <div class="wrapper">
-        <nav class="nav">
-        <picture>
+        <nav class="nav" aria-label="основное меню">
+        <picture class="nav__logo">
           <source
             type="image/webp"
             srcset="img/logo.webp"
@@ -30,7 +30,11 @@
             <li class="nav__item"><a href="#">O нас</a></li>
             <li class="nav__item"><a href="#">Контакты</a></li>
           </ul>
+          <a class="nav__consultation">Консультация</a>
         </nav>
+      </div>
+      <div class="main-header__slider">
+        <img src="../../img/header-img1.jpg" alt="">
       </div>
     </header>
     <script src="js/burger-menu.js"></script>
