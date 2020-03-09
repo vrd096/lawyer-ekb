@@ -84,7 +84,7 @@
     animation-name: hideBurger;
     animation-fill-mode: forwards;
     animation-duration: 0.7s;
-    animation-timing-function: cubic-bezier(0,.81,1,-0.03);
+    animation-timing-function: cubic-bezier(0, 0.81, 1, -0.03);
     &::before {
       animation-name: openBurgerOne;
       animation-fill-mode: forwards;
@@ -99,7 +99,7 @@
   .nav__toggle-burger--closed .nav__toggle-burger {
     animation-name: showBurger;
     animation-duration: 0.8s;
-    animation-timing-function: cubic-bezier(0,.81,1,-0.03);
+    animation-timing-function: cubic-bezier(0, 0.81, 1, -0.03);
     &::before {
       animation-name: closeBurgerOne;
       animation-duration: 1s;
@@ -162,9 +162,32 @@
     border: 2px solid $gold;
     cursor: pointer;
     span {
+      position: relative;
+      bottom: 4px;
+      display: inline-block;
+      margin-left: 10px;
       width: 13px;
       height: 2px;
       background-color: $gold;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 6px;
+        height: 2px;
+        background-color: $gold;
+      }
+      &::before {
+        bottom: 2px;
+        left: 7px;
+        transform: rotate(45deg);
+      }
+      &::after {
+        top: 2px;
+        left: 7px;
+        transform: rotate(-45deg);
+      }
     }
   }
 }
