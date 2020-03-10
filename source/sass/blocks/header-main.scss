@@ -139,20 +139,37 @@
 }
 
 @media (min-width: 1200px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
   .nav__toggle {
     display: none;
   }
   .nav__logo {
     display: block;
+    width: 100%;
   }
   .nav__list {
     display: flex;
+    width: auto;
     background-color: transparent;
     border: 0;
   }
   .nav__item {
     border: 0;
+    &--active a {
+      color: $gold;
+    }
+    a {
+      transition: all 0.3s;
+    }
+    &:hover a {
+      color: $gold;
+    }
   }
+
   .nav__consultation {
     display: inline-block;
     padding: 15px 25px;
@@ -160,6 +177,7 @@
     font-weight: 500;
     color: $gold;
     border: 2px solid $gold;
+    transition: all 0.3s;
     cursor: pointer;
     span {
       position: relative;
@@ -189,5 +207,18 @@
         transform: rotate(-45deg);
       }
     }
+    &:hover {
+      background-color: $gold;
+      color: $white;
+    }
+    &:hover span,
+    &:hover span::before,
+    &:hover span::after {
+      background-color: $white;
+    }
+  }
+  .main-header__slider img {
+    height: 97vh;
+    object-position: 50% 80%;
   }
 }
