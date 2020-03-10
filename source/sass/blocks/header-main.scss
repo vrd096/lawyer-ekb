@@ -199,11 +199,13 @@
     border: 0;
   }
   .nav__item {
+    margin-right: 10px;
     border: 0;
     &--active a {
       color: $gold;
     }
     a {
+      font-size: 12px;
       transition: all 0.3s;
     }
     &:hover a {
