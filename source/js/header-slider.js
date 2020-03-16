@@ -11,16 +11,16 @@
     let sliderSubtitleTwo = document.querySelector(".js-slider-subtitle-two");
     let wrapperOne = document.querySelector(".main-header__slider-block-one");
     let wrapperTwo = document.querySelector(".main-header__slider-block-two");
-    let NumberPages = document.querySelector(".main-header__slider-pages");
-
+    let NumberSlide = document.querySelector(".main-header__slider-pages");
+    let nextSlide = "";
     function nextPage(item) {
-      if (item.includes("01/02")) {
-        item.textContent = "02/02";
+      if (item.textContent == "01/02") {
+        nextSlide = "02/02";
       }
-      if (item.includes("02/02")) {
-        item.textContent = "01/02";
+      if (item.textContent == "02/02") {
+        nextSlide = "01/02";
       }
-
+      item.textContent = nextSlide;
     }
 
     function nextBacgroundImage() {
@@ -48,7 +48,7 @@
     window.setInterval(function() {
       sliderTimer(3000)
         .then(() => {
-          nextPage(NumberPages);
+          nextPage(NumberSlide);
           nextBacgroundImage();
           changeBlock(wrapperOne);
           changeBlock(wrapperTwo);
