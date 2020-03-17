@@ -174,7 +174,7 @@
     }
     &-title {
       display: block;
-      font-size: 7px;
+      font-size: 9px;
       font-weight: 600;
       overflow: hidden;
       letter-spacing: 1px;
@@ -193,7 +193,7 @@
     }
     &-subtitle {
       margin-top: 10px;
-      font-size: 26px;
+      font-size: 28px;
       font-family: playfair;
       transform: translateX(0);
       transition: transform 2s ease-in-out;
@@ -216,6 +216,8 @@
     }
     &-arrows {
       svg {
+        width: 35px;
+        height: 20px;
         cursor: pointer;
         fill: $white;
       }
