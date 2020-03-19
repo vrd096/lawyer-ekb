@@ -1,21 +1,22 @@
 "use strict";
 
 (function() {
-  let nav = document.querySelector(".nav");
-  let list  = document.querySelector(".nav__list");
+  const nav = document.querySelector(".js-navigation");
+  const headerSlider = document.querySelector(".main-header__slider-container");
+  let scroll = false;
 
-  window.addEventListener("scroll", function() {
-    if (window.pageYOffset > 50) {
+  function toggleScroll() {
+    if (!scroll && window.pageYOffset > 50) {
+      scroll = true;
       nav.classList.add("nav-is-scroll");
-    } else {
+      // console.log("show");
+      // headerSlider.classList.add("main-header__slider-container--margin");
+    } else if (scroll && window.pageYOffset <= 50) {
+      scroll = false;
       nav.classList.remove("nav-is-scroll");
+      // headerSlider.classList.remove("main-header__slider-container--margin");
     }
+  }
 
-
-  });
-
-
-
-
-
+  window.addEventListener("scroll", toggleScroll);
 })();
