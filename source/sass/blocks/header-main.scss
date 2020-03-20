@@ -53,6 +53,10 @@
       font-weight: 700;
       color: $white;
       text-transform: uppercase;
+      &:active {
+        color: $gold;
+        background-color: transparent;
+      }
     }
   }
   .nav__consultation {
@@ -145,7 +149,6 @@
       z-index: -5;
       width: 100%;
       height: 70vh;
-      // background-size: 100%;
       background-color: transparent;
       background-repeat: no-repeat;
       background-position: center;
@@ -154,10 +157,10 @@
       transition: opacity 1s;
     }
     &-img-one {
-      background-image: url(../../img/header-img1.jpg);
+      background-image: url("../img/header-img1.jpg");
     }
     &-img-two {
-      background-image: url(../../img/header-img2.jpg);
+      background-image: url("../img/header-img2.jpg");
       opacity: 0;
     }
     &-container {
@@ -228,6 +231,17 @@
     }
   }
 }
+
+// @media (min-width: 360px) {
+//   .main-header__slider {
+//     &-title {
+//       font-size: 10px;
+//     }
+//     &-subtitle {
+//       font-size: 33px;
+//     }
+//   }
+// }
 
 @media (min-width: 768px) {
   .main-header {

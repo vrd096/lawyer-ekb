@@ -2,7 +2,7 @@
 
 (function() {
   window.addEventListener("load", function() {
-    let sliderImgTwo = document.querySelector(".js-slider-two");
+    let sliderImgTwo = document.querySelector(".main-header__slider-img-two");
     let sliderTitleOne = document.querySelector(".js-slider-title-one");
     let sliderTitleTwo = document.querySelector(".js-slider-title-two");
     let sliderLineOne = document.querySelector(".js-slider-line-one");
@@ -17,7 +17,7 @@
       ".main-header__slider-arrows-right"
     );
 
-    function nextPage(item) {
+    function rewritePage(item) {
       let nextSlide = "";
       if (item.textContent == "01/02") {
         nextSlide = "02/02";
@@ -45,7 +45,7 @@
     function startSlider() {
       sliderTimer(0)
         .then(() => {
-          nextPage(NumberSlide);
+          rewritePage(NumberSlide);
           nextBacgroundImage();
           changeBlock(wrapperOne);
           changeBlock(wrapperTwo);
