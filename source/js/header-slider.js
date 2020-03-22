@@ -2,19 +2,19 @@
 
 (function() {
   window.addEventListener("load", function() {
-    let sliderImgTwo = document.querySelector(".main-header__slider-img-two");
+    let sliderImgTwo = document.querySelector(".header__slider-img-two");
     let sliderTitleOne = document.querySelector(".js-slider-title-one");
     let sliderTitleTwo = document.querySelector(".js-slider-title-two");
     let sliderLineOne = document.querySelector(".js-slider-line-one");
     let sliderLineTwo = document.querySelector(".js-slider-line-two");
     let sliderSubtitleOne = document.querySelector(".js-slider-subtitle-one");
     let sliderSubtitleTwo = document.querySelector(".js-slider-subtitle-two");
-    let wrapperOne = document.querySelector(".main-header__slider-block-one");
-    let wrapperTwo = document.querySelector(".main-header__slider-block-two");
-    let NumberSlide = document.querySelector(".main-header__slider-pages");
-    let arrowLeft = document.querySelector(".main-header__slider-arrows-left");
+    let wrapperOne = document.querySelector(".header__slider-block-one");
+    let wrapperTwo = document.querySelector(".header__slider-block-two");
+    let NumberSlide = document.querySelector(".header__slider-pages");
+    let arrowLeft = document.querySelector(".header__slider-arrows-left");
     let arrowRight = document.querySelector(
-      ".main-header__slider-arrows-right"
+      ".header__slider-arrows-right"
     );
 
     function rewritePage(item) {
@@ -29,20 +29,20 @@
     }
 
     function nextBacgroundImage() {
-      sliderImgTwo.classList.toggle("main-header__slider-show");
+      sliderImgTwo.classList.toggle("header__slider-show");
     }
     function changeBlock(item) {
-      item.classList.toggle("main-header__slider-block--show");
+      item.classList.toggle("header__slider-block--show");
     }
     function transformText(item) {
-      item.classList.toggle("main-header__slider--transform");
+      item.classList.toggle("header__slider--transform");
     }
 
     const sliderTimer = time => {
       return new Promise((resolve, reject) => setTimeout(resolve, time));
     };
 
-    function startSlider() {
+    function playSlider() {
       sliderTimer(0)
         .then(() => {
           rewritePage(NumberSlide);
@@ -69,16 +69,16 @@
 
     function updateInterval() {
       clearInterval(handle);
-      handle = setInterval(startSlider, 10000);
+      handle = setInterval(playSlider, 10000);
     }
     updateInterval();
 
     arrowLeft.addEventListener("click", function() {
-      startSlider();
+      playSlider();
       updateInterval();
     });
     arrowRight.addEventListener("click", function() {
-      startSlider();
+      playSlider();
       updateInterval();
     });
   });
