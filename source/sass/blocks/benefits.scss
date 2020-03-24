@@ -1,0 +1,9 @@
+@import "../variables.scss";
+
+@media (min-width: 320px) {
+  .benefits {
+    padding: 65px 0 200px;
+    background-color: $light-grey;
+
+  }
+}
