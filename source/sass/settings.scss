@@ -28,6 +28,16 @@ ul {
   padding: 0;
   list-style-type: none;
 }
+svg, a {
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
 
 .visually-hidden {
   position: absolute;
@@ -63,7 +73,7 @@ ul {
 @media (min-width: 768px) {
   .wrapper {
     width: auto;
-    padding: 0 64px;
+    padding: 0 32px;
   }
 }
 

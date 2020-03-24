@@ -76,7 +76,7 @@ function imgToWebp() {
 
 function copy() {
   return gulp
-    .src(["source/fonts/**/*.{woff,woff2}", "source/img/**", "source/js/**"], {
+    .src(["source/fonts/**/**", "source/img/**", "source/js/**"], {
       base: "source"
     })
     .pipe(gulp.dest("build"));
