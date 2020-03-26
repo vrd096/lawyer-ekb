@@ -29,14 +29,50 @@
       font-size: 15px;
       line-height: 1.5;
       color: $white;
+      text-align: justify;
       &--first-spacing::first-letter {
         float: left;
-        margin-top: -15px;
+        margin-top: -13px;
         margin-right: 10px;
         vertical-align: top;
         font-size: 55px;
         font-family: $playfair;
       }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .benefits {
+    padding: 65px 0 180px;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 17px;
+    }
+    &__content {
+      max-width: 60%;
+    }
+    &__discription {
+      line-height: 1.6;
+    }
+    &__subtitle {
+      margin: 0;
+    }
+  }
+  .benefits__description--first-spacing {
+    margin: 0 0 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .benefits {
+    padding: 95px 0 180px;
+    &__intro {
+      margin-right: 15px;
+    }
+    &__subtitle {
+      font-size: 40px;
+      font-weight: 400;
     }
   }
 }
