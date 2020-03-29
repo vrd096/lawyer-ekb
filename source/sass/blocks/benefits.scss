@@ -40,6 +40,47 @@
       }
     }
   }
+
+  .law-features {
+    &__item {
+      padding: 50px 30px 40px;
+      svg {
+        fill: $gold;
+      }
+      &-title {
+        margin-bottom: 10px;
+        font-size: 25px;
+        font-weight: 400;
+        font-family: $playfair;
+        color: $light-grey;
+        &::after {
+          content: "";
+          display: block;
+          margin-top: 20px;
+          width: 100px;
+          height: 1px;
+          background-color: #d9dadb;
+        }
+      }
+      &-subtitle {
+        line-height: 1.6;
+        margin-top: 25px;
+        margin-bottom: 0;
+      }
+    }
+    &__item--gold {
+      background-color: $gold;
+      svg {
+        fill: $white;
+      }
+      .law-features__item-title {
+        color: $white;
+      }
+      .law-features__item-subtitle {
+        color: $white;
+      }
+    }
+  }
 }
 @media (min-width: 768px) {
   .intro {
