@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 @media (min-width: 320px) {
-  .benefits {
+  .intro {
     padding: 65px 0 200px;
     background-color: $light-grey;
     &__subtitle {
@@ -20,7 +20,7 @@
         background-color: $gold;
       }
     }
-    &__intro {
+    &__headline {
       img {
         margin: 15px 0 55px;
       }
@@ -42,15 +42,15 @@
   }
 }
 @media (min-width: 768px) {
-  .benefits {
+  .intro {
     padding: 65px 0 180px;
-    &__container {
+    &__inner {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       margin-top: 17px;
     }
-    &__intro {
+    &__headline {
       margin-right: 10px;
     }
     &__content {
@@ -63,14 +63,14 @@
       margin: 0;
     }
   }
-  .benefits__description--first-spacing {
+  .intro__description--first-spacing {
     margin: 0 0 20px;
   }
 }
 @media (min-width: 1024px) {
-  .benefits {
+  .intro {
     padding: 95px 0 180px;
-    &__intro {
+    &__headline {
       margin-right: 15px;
     }
     &__subtitle {
