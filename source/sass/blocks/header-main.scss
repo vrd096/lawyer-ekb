@@ -317,7 +317,7 @@
   .header__contacts {
     display: block;
     width: inherit;
-    padding: 20px;
+    padding: 20px 0;
     background-color: #323a43;
   }
   .header__contacts-list {
@@ -329,7 +329,7 @@
   .header__contacts-item {
     display: inline-flex;
     align-items: center;
-    margin-right: 30px;
+    // margin-right: 30px;
     font-size: 14px;
     color: $white;
     svg {
