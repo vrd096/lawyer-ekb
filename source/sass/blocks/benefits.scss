@@ -93,6 +93,32 @@
       }
     }
   }
+  .law {
+    &__container {
+      transform: translateY(-150px);
+    }
+    &__photo {
+      width: 100%;
+      margin-bottom: 22px;
+    }
+    &__subtitle {
+      margin: 15px 0;
+      font-size: 34px;
+      color: $light-grey;
+    }
+    &__description {
+      margin-top: 30px;
+      line-height: 1.6;
+    }
+    &__list {
+      font-size: 25px;
+      list-style-type: disc;
+    }
+    &__item {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  }
 }
 @media (min-width: 768px) {
   .intro {
