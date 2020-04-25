@@ -111,12 +111,41 @@
       line-height: 1.6;
     }
     &__list {
-      font-size: 25px;
-      list-style-type: disc;
+      padding: 0 20px;
     }
     &__item {
       font-size: 15px;
-      line-height: 1.6;
+      &::before {
+        content: ".";
+        margin-right: 10px;
+        font-size: 80px;
+        line-height: 0;
+      }
+    }
+    &__contacts {
+      margin-top: 75px;
+    }
+    &__experience {
+      display: flex;
+      padding: 0 20px;
+      svg {
+        margin-right: 10px;
+        width: 60px;
+        fill: $gold;
+      }
+    }
+    &__experience-year {
+      display: inline;
+      margin-left: 15px;
+      font-size: 24px;
+      line-height: 2;
+      font-family: playfair;
+      color: $dark-grey;
+      span {
+        margin-left: 10px;
+        font-size: 34px;
+        // text-transform: uppercase;
+      }
     }
   }
 }
