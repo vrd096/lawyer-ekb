@@ -123,7 +123,9 @@
       }
     }
     &__contacts {
-      margin-top: 75px;
+      margin-top: 50px;
+      padding: 20px 0;
+      border-top: 1px solid #e7e7e7;
     }
     &__experience {
       display: flex;
@@ -140,15 +142,21 @@
       line-height: 1.4;
 
       span {
-        margin-left: 10px;
-        font-size: 22px;
         font-family: playfair;
+        font-size: 22px;
         color: $dark-grey;
         text-transform: uppercase;
       }
     }
     &__phone {
-      padding: 0 40px;
+      padding: 0 22px;
+      margin: 50px auto 0;
+    }
+    &__phone-number {
+      font-family: playfair;
+      font-size: 22px;
+      line-height: 0;
+      color: $dark-grey;
     }
   }
 }
