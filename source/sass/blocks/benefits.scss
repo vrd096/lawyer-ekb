@@ -112,6 +112,7 @@
     }
     &__list {
       padding: 0 20px;
+      margin: 0;
     }
     &__item {
       font-size: 15px;
@@ -216,6 +217,9 @@
     &__inner {
       margin-left: 20px;
     }
+    &__list {
+      margin: 0;
+    }
   }
 }
 @media (min-width: 1024px) {
@@ -248,18 +252,15 @@
   }
   .law {
     &__list-inner {
-      padding: 0 30px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-    }
-    &__list {
-      margin: 0;
+      &__list-inner:first-child {
+        background-color: red;
+      }
     }
     &__item {
-      // min-width: 120px;
-      // margin-right: 50px;
-      line-height: 1.4;
+      display: block;
     }
     &__contacts {
       display: flex;
