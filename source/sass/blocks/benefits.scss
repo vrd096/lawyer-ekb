@@ -205,6 +205,18 @@
   .law-features__item:nth-child(2) {
     border-right: 2px solid #f8f8f8;
   }
+  .law {
+    &__container {
+      display: flex;
+    }
+    &__photo {
+      width: 50%;
+      height: 50%;
+    }
+    &__inner {
+      margin-left: 20px;
+    }
+  }
 }
 @media (min-width: 1024px) {
   .intro {
@@ -232,6 +244,29 @@
     }
     &-subtitle {
       margin-top: 23px;
+    }
+  }
+  .law {
+    &__list-inner {
+      padding: 0 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__list {
+      margin: 0;
+    }
+    &__item {
+      // min-width: 120px;
+      // margin-right: 50px;
+      line-height: 1.4;
+    }
+    &__contacts {
+      display: flex;
+      align-items: center;
+    }
+    &__phone {
+      margin: 0;
     }
   }
 }
