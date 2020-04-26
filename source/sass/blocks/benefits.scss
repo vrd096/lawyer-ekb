@@ -130,22 +130,25 @@
       padding: 0 20px;
       svg {
         margin-right: 10px;
-        width: 60px;
+        width: 50px;
         fill: $gold;
       }
     }
-    &__experience-year {
+    &__experience-text {
       display: inline;
-      margin-left: 15px;
-      font-size: 24px;
-      line-height: 2;
-      font-family: playfair;
-      color: $dark-grey;
+      margin-left: 10px;
+      line-height: 1.4;
+
       span {
         margin-left: 10px;
-        font-size: 34px;
-        // text-transform: uppercase;
+        font-size: 22px;
+        font-family: playfair;
+        color: $dark-grey;
+        text-transform: uppercase;
       }
+    }
+    &__phone {
+      padding: 0 40px;
     }
   }
 }
