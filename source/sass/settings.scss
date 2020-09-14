@@ -1,3 +1,4 @@
+@import "variables.scss";
 *,
 *::before,
 *::after {
@@ -37,6 +38,14 @@ svg, a {
   -webkit-tap-highlight-color: transparent;
 }
 
+h2 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: $gold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 
 
 .visually-hidden {
@@ -73,7 +82,7 @@ svg, a {
 @media (min-width: 768px) {
   .wrapper {
     width: auto;
-    padding: 0 32px;
+    padding: 0 24px;
   }
 }
 
