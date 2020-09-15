@@ -30,13 +30,49 @@
         color: $gold;
       }
       &-subtitle {
+        margin-top: 15px;
         font-size: 18px;
         font-weight: 500;
         font-family: $playfair;
         color: $light-grey;
+        span {
+          position: relative;
+          bottom: 4px;
+          display: inline-block;
+          margin-left: 3px;
+          width: 13px;
+          height: 1px;
+          background-color: $light-grey;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 7px;
+            height: 1px;
+            background-color: $light-grey;
+          }
+          &::before {
+            bottom: 2px;
+            left: 7px;
+            transform: rotate(45deg);
+          }
+          &::after {
+            top: 2px;
+            left: 7px;
+            transform: rotate(-45deg);
+          }
+        }
       }
       &-subtitle:hover {
         color: $gold;
+        span {
+          background-color: $gold;
+          &::before,
+          &::after {
+            background-color: $gold;
+          }
+        }
       }
     }
   }
