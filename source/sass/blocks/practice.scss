@@ -2,15 +2,42 @@
 
 @media (min-width: 320px) {
   .practice {
-      background-color: red;
     padding-top: 70px;
     &__title {
+      text-align: center;
     }
 
     &__subtitle {
+      text-align: center;
+      &::after {
+        margin: 7px auto 0;
+      }
     }
-
     &__description {
+      font-size: 16px;
+      line-height: 1.4;
+      color: #272b2e;
+      text-align: center;
+    }
+    &__slider {
+      &-item {
+        display: block;
+        width: 200px;
+        height: 200px;
+      }
+      &-title {
+        font-size: 14px;
+        color: $gold;
+      }
+      &-subtitle {
+        font-size: 18px;
+        font-weight: 500;
+        font-family: $playfair;
+        color: $light-grey;
+      }
+      &-subtitle:hover {
+        color: $gold;
+      }
     }
   }
 }
