@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+@media (min-width: 320px) {
+  .practice {
+      background-color: red;
+    padding-top: 70px;
+    &__title {
+    }
+
+    &__subtitle {
+    }
+
+    &__description {
+    }
+  }
+}
