@@ -22,27 +22,53 @@
     &__slider {
       &-item {
         display: block;
-        width: 200px;
-        height: 200px;
+        width: 100%;
+        // height: 280px;
+        // background-color: red;
+      }
+      &-picture {
+        width: 100%;
+        height: 280px;
+        img {
+          width: 100%;
+        }
+      }
+      &-container {
+        position: relative;
+        top: -50px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 5px 20px 5px 15px;
+        background-color: #fff;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s;
+        &:hover {
+          transform: translateY(-10px);
+        }
       }
       &-title {
         font-size: 14px;
+        letter-spacing: 1px;
         color: $gold;
       }
       &-subtitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-top: 15px;
         font-size: 18px;
         font-weight: 500;
         font-family: $playfair;
         color: $light-grey;
+        transition: color 0.5s;
         span {
           position: relative;
-          bottom: 4px;
+          vertical-align: middle;
           display: inline-block;
-          margin-left: 3px;
           width: 13px;
           height: 1px;
           background-color: $light-grey;
+          transition: all 0.5s;
           &::before,
           &::after {
             content: "";
@@ -51,6 +77,7 @@
             width: 7px;
             height: 1px;
             background-color: $light-grey;
+            transition: all 0.5s;
           }
           &::before {
             bottom: 2px;
@@ -71,6 +98,24 @@
           &::before,
           &::after {
             background-color: $gold;
+          }
+        }
+      }
+      &-bullets {
+        button {
+          width: 10px;
+          height: 10px;
+          background-color: #272b2e;
+          &:hover {
+            border: 2px solid #cdba6d;
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+          &:focus{
+            border: 2px solid #cdba6d;
+            background-color: #cdba6d;
+          }
+          &:active {
+            background-color: #cdba6d;
           }
         }
       }

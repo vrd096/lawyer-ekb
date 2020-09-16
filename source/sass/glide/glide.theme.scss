@@ -70,12 +70,12 @@
 
     &:hover,
     &:focus {
-      border: 2px solid white;
-      background-color: rgba(255, 255, 255, 0.5);
+      border: 2px solid #cdba6d;
+      background-color: #cdba6d;
     }
 
     &#{$sm}active {
-      background-color: white;
+      background-color: #cdba6d;
     }
   }
 
