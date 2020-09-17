@@ -107,15 +107,15 @@
           height: 10px;
           background-color: #272b2e;
           &:hover {
-            border: 2px solid #cdba6d;
+            border: 2px solid $gold;
             background-color: rgba(255, 255, 255, 0.5);
           }
           &:focus{
-            border: 2px solid #cdba6d;
-            background-color: #cdba6d;
+            border: 2px solid $gold;
+            background-color: $gold;
           }
           &:active {
-            background-color: #cdba6d;
+            background-color: $gold;
           }
         }
       }

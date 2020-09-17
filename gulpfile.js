@@ -38,17 +38,17 @@ function scripts() {
   return gulp
     .src("source/js/**/*.js")
     .pipe(sourcemaps.init())
-    .pipe(
-      babel({
-        presets: ["@babel/env"]
-      })
-    )
-    .on("error", console.error.bind(console))
-    .pipe(
-      uglify({
-        toplevel: true
-      })
-    )
+    // .pipe(
+    //   babel({
+    //     presets: ["@babel/env"]
+    //   })
+    // )
+    // .on("error", console.error.bind(console))
+    // .pipe(
+    //   uglify({
+    //     toplevel: true
+    //   })
+    // )
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./build/js"))
     .pipe(browserSync.stream());
