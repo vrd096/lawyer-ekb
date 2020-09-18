@@ -38,17 +38,17 @@ function scripts() {
   return gulp
     .src("source/js/**/*.js")
     .pipe(sourcemaps.init())
-    // .pipe(
-    //   babel({
-    //     presets: ["@babel/env"]
-    //   })
-    // )
-    // .on("error", console.error.bind(console))
-    // .pipe(
-    //   uglify({
-    //     toplevel: true
-    //   })
-    // )
+    .pipe(
+      babel({
+        presets: ["@babel/preset-env"],
+      })
+    )
+    .on("error", console.error.bind(console))
+    .pipe(
+      uglify({
+        toplevel: true,
+      })
+    )
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./build/js"))
     .pipe(browserSync.stream());
@@ -77,7 +77,7 @@ function imgToWebp() {
 function copy() {
   return gulp
     .src(["source/fonts/**/**", "source/img/**", "source/js/**"], {
-      base: "source"
+      base: "source",
     })
     .pipe(gulp.dest("build"));
 }
@@ -88,7 +88,7 @@ function clean() {
 
 function watch() {
   browserSync.init({
-    server: "build/"
+    server: "build/",
   });
 
   gulp.watch("source/sass/**/*.scss", styles);
@@ -103,11 +103,6 @@ gulp.task("watch", watch);
 gulp.task("clean", clean);
 gulp.task(
   "build",
-  gulp.series(
-    clean,
-    imgToWebp,
-    copy,
-    gulp.parallel(html, styles, scripts)
-  )
+  gulp.series(clean, imgToWebp, copy, gulp.parallel(html, styles, scripts))
 );
 gulp.task("start", gulp.series("build", "watch"));
