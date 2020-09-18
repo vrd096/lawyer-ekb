@@ -20,6 +20,7 @@
       text-align: center;
     }
     &__slider {
+      margin-top: 70px;
       &-item {
         display: block;
         width: 100%;
@@ -101,24 +102,26 @@
           }
         }
       }
-      &-bullets {
-        button {
-          width: 10px;
-          height: 10px;
-          background-color: #272b2e;
-          &:hover {
-            border: 2px solid $gold;
-            background-color: rgba(255, 255, 255, 0.5);
-          }
-          &:focus{
-            border: 2px solid $gold;
-            background-color: $gold;
-          }
-          &:active {
-            background-color: $gold;
-          }
-        }
-      }
+      // &-bullets {
+      //   margin-top: 110px;
+      //   button {
+      //     margin: 0 10px;
+      //     width: 10px;
+      //     height: 10px;
+      //     background-color: #272b2e;
+      //     &:hover {
+      //       border: 2px solid $gold;
+      //       background-color: rgba(255, 255, 255, 0.5);
+      //     }
+      //     &:focus{
+      //       border: 2px solid $gold;
+      //       background-color: $gold;
+      //     }
+      //     &:active {
+      //       background-color: $gold;
+      //     }
+      //   }
+      // }
     }
   }
 }

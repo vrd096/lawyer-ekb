@@ -53,8 +53,9 @@
 
   &#{$se}bullet {
     background-color: rgba(255, 255, 255, 0.5);
-    width: 90px;
-    height: 90px;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
     padding: 0;
     border-radius: 50%;
     border: 2px solid transparent;
@@ -63,13 +64,12 @@
     line-height: 0;
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
     margin: 0 0.25em;
-
+    background-color: #272b2e;
     &:focus {
       outline: none;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       border: 2px solid #cdba6d;
       background-color: rgba(255, 255, 255, 0.5);
     }
