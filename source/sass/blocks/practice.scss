@@ -3,6 +3,7 @@
 @media (min-width: 320px) {
   .practice {
     padding-top: 70px;
+    padding-bottom: 80px;
     &__title {
       text-align: center;
     }
@@ -37,6 +38,8 @@
       &-container {
         position: relative;
         top: -50px;
+        z-index: 10;
+        display: block;
         width: 90%;
         margin: 0 auto;
         padding: 5px 20px 5px 15px;
@@ -102,26 +105,11 @@
           }
         }
       }
-      // &-bullets {
-      //   margin-top: 110px;
-      //   button {
-      //     margin: 0 10px;
-      //     width: 10px;
-      //     height: 10px;
-      //     background-color: #272b2e;
-      //     &:hover {
-      //       border: 2px solid $gold;
-      //       background-color: rgba(255, 255, 255, 0.5);
-      //     }
-      //     &:focus{
-      //       border: 2px solid $gold;
-      //       background-color: $gold;
-      //     }
-      //     &:active {
-      //       background-color: $gold;
-      //     }
-      //   }
-      // }
+      &-bullets {
+        button {
+          margin: 0 10px;
+        }
+      }
     }
   }
 }
