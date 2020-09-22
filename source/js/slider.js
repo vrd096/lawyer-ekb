@@ -5,6 +5,7 @@ let slider = new Glide(".glide", {
   startAt: 0,
   perView: 2,
   autoplay: 3000,
+  gap: 30,
   breakpoints: {
     4096: {
       perView: 3,

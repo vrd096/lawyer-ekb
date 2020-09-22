@@ -129,10 +129,20 @@
     margin: 0 auto;
   }
 }
+@media (min-width: 901px) and (max-width: 1023px) {
+  .practice__slider-container {
+    margin-top: -50px;
+  }
+}
 
-@media (min-width: 1024px) {
-  // .practice__slider {
-  //   width: 70%;
-  //   margin: 0 auto;
-  // }
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .practice__slider-container {
+    margin-top: -20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .practice__slider-container {
+    margin-top: 20px;
+  }
 }
