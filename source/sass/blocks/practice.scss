@@ -1,0 +1,148 @@
+@import "../variables.scss";
+
+@media (min-width: 320px) {
+  .practice {
+    padding-top: 70px;
+    padding-bottom: 80px;
+    &__title {
+      text-align: center;
+    }
+
+    &__subtitle {
+      text-align: center;
+      &::after {
+        margin: 7px auto 0;
+      }
+    }
+    &__description {
+      font-size: 16px;
+      line-height: 1.4;
+      color: #272b2e;
+      text-align: center;
+    }
+    &__slider {
+      margin-top: 70px;
+      &-item {
+        display: block;
+        // width: 50%;
+        // height: 280px;
+        // background-color: red;
+      }
+      &-picture {
+        width: 100%;
+        height: 280px;
+        img {
+          width: 100%;
+        }
+      }
+      &-container {
+        position: relative;
+        top: -50px;
+        z-index: 10;
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        padding: 5px 20px 5px 15px;
+        background-color: #fff;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+        transition: transform 0.3s;
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
+      &-title {
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: $gold;
+      }
+      &-subtitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: $playfair;
+        color: $light-grey;
+        transition: color 0.5s;
+        span {
+          position: relative;
+          vertical-align: middle;
+          display: inline-block;
+          width: 13px;
+          height: 1px;
+          background-color: $light-grey;
+          transition: all 0.5s;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            width: 7px;
+            height: 1px;
+            background-color: $light-grey;
+            transition: all 0.5s;
+          }
+          &::before {
+            bottom: 2px;
+            left: 7px;
+            transform: rotate(45deg);
+          }
+          &::after {
+            top: 2px;
+            left: 7px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+      &-subtitle:hover {
+        color: $gold;
+        span {
+          background-color: $gold;
+          &::before,
+          &::after {
+            background-color: $gold;
+          }
+        }
+      }
+      &-bullets {
+        button {
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 490px) and (max-width: 769px) {
+  .practice {
+    &__slider {
+      &-bullets {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+@media (min-width: 700px) and (max-width: 1023px) {
+  .practice__slider {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 901px) and (max-width: 1023px) {
+  .practice__slider-container {
+    margin-top: -50px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .practice__slider-container {
+    margin-top: -20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .practice__slider-container {
+    margin-top: 20px;
+  }
+}

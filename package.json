@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@babel/runtime": "^7.11.2",
     "del": "^5.1.0"
   },
   "devDependencies": {
