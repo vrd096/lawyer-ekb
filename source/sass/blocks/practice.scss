@@ -24,7 +24,7 @@
       margin-top: 70px;
       &-item {
         display: block;
-        width: 100%;
+        // width: 50%;
         // height: 280px;
         // background-color: red;
       }
@@ -112,4 +112,27 @@
       }
     }
   }
+}
+
+@media (min-width: 490px) and (max-width: 769px) {
+  .practice {
+    &__slider {
+      &-bullets {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+@media (min-width: 700px) and (max-width: 1023px) {
+  .practice__slider {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  // .practice__slider {
+  //   width: 70%;
+  //   margin: 0 auto;
+  // }
 }

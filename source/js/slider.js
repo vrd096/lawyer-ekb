@@ -6,10 +6,13 @@ let slider = new Glide(".glide", {
   perView: 2,
   autoplay: 3000,
   breakpoints: {
-    1024: {
+    4096: {
+      perView: 3,
+    },
+    900: {
       perView: 2,
     },
-    768: {
+    500: {
       perView: 1,
     },
   },
