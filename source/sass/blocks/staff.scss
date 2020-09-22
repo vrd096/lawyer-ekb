@@ -1,0 +1,23 @@
+@import "../variables.scss";
+
+.staff {
+    background-color: #2d3436;
+    background-image: linear-gradient(200deg, #363b42 0%, #1d1f24 74%);
+    &__subtitle {
+        color: #fff;
+    }
+    &__description {
+        color: #fff;
+    }
+}
+
+@media (min-width: 320px) {
+    .staff {
+        padding-top: 55px;
+        padding-bottom: 120px;
+        &__description {
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+    }
+}
