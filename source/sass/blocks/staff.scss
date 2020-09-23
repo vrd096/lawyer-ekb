@@ -20,9 +20,25 @@
             line-height: 1.6;
         }
         &__item {
-            width: 100%;
+            margin-top: 35px;
             img {
-                width: 10%;
+                width: 100%;
+            }
+            p {
+                margin: 0;
+                padding: 25px 0; 
+                background-color: #fff;
+                color: $light-grey;
+                font-family: $playfair;
+                font-size: 24px;
+                text-align: center;
+            }
+            span {
+                font-family: "Montserrat", Tahoma, Geneva, sans-serif;
+                font-size: 13px;
+                font-weight: 500;
+                text-transform: uppercase;
+                color: $gold;
             }
         }
     }
