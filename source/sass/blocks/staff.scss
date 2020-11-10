@@ -43,3 +43,37 @@
         }
     }
 }
+
+@media (min-width: 768px) {
+    .staff {
+        padding-top: 90px;
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        &__description {
+            margin-top: 0;
+            margin-left: 50px;
+            max-width: 55%;
+        }
+        &__list {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__item {
+            width: 30%;
+
+        }
+    }
+}
+@media (min-width: 1200px) {
+  .staff {
+      padding-bottom: 105px;
+    &__description {
+        margin-top: 45px;
+        margin-left: 50px;
+        max-width: 55%;
+    }
+  }
+  }
