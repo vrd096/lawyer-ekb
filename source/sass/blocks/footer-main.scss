@@ -19,7 +19,7 @@
       display: inline-flex;
       align-items: center;
       font-family: $playfair;
-      font-size: 18px;
+      font-size: 16px;
       color: #9e9da3;
       letter-spacing: 1;
     }
@@ -45,10 +45,49 @@
         margin-left: 10px;
         display: inline;
         max-width: 120px;
-        font-size: 11px;
+        font-size: 12px;
         font-family: $playfair;
         color: $white;
       }
+    }
+    &__feedback {
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    &__feedback-text {
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 1px;
+        color: rgba(255, 255, 255, 0.70);
+    }
+    &__feedback-mail {
+        display: inline;
+        width: 81%;
+        padding: 20px 30px;
+        margin: 0;
+        vertical-align: middle;
+        border: none;
+    }
+    &__feedback-mail::placeholder {
+        font-size: 14px;
+        color: #42474c8c;
+    }
+    &__feedback-button {
+        // display: inline-flex;
+        // align-items: center;
+        // justify-content: center;
+        // width: 70px;
+        height: 55px;
+        vertical-align: middle;
+        margin-left: -4px;
+        padding: 18px 20px;
+        background-color: $gold;
+        border: none;
+        svg {
+            position: relative;
+            left: 20%;
+            fill: #fff;
+        }
     }
   }
 }
