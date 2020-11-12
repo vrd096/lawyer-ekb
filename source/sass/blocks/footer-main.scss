@@ -69,6 +69,7 @@
         margin: 0;
         vertical-align: middle;
         border: none;
+        border-radius: 0;
     }
     &__feedback-mail::placeholder {
         font-size: 14px;
@@ -90,6 +91,16 @@
             left: 25%;
             fill: #fff;
         }
+    }
+    &__copyright {
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      p {
+        font-size: 14px;
+        line-height: 2.2;
+        color: $white;
+      }
     }
   }
 }
@@ -115,6 +126,23 @@
       border-right: 1px solid rgba(255, 255, 255, 0.15);
       border-left: 1px solid rgba(255, 255, 255, 0.15);
     }
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    &__logo {
+      width: 30%;
+      padding: 0;
+    }
+    &__feedback {
+      width: 70%;
+    }
+    &__feedback-text {
+      margin-top: 0;
+    }
   }
 }
 @media (min-width: 1200px) {
@@ -126,6 +154,12 @@
       padding-top: 55px;
       padding-bottom: 55px;
       font-size: 17px;
+    }
+    &__container {
+      justify-content: center;
+    }
+    &__feedback {
+      width: 50%;
     }
   }
 }
