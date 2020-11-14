@@ -2,16 +2,16 @@ const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport(
   {
-    host: "smtp.ethereal.email",
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    host: "smtp.mail.ru",
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
-      user: "brandi12@ethereal.email",
-      pass: "Uf1YWCQ2nMXvk46Pxj",
+      user: "resender-mail@inbox.ru",
+      pass: "Egogo10ist",
     },
   },
   {
-    from: "Mailer test <brandi12@ethereal.email>",
+    from: "Mailer test <resender-mail@inbox.ru>",
   }
 );
 
