@@ -75,6 +75,9 @@
         font-size: 14px;
         color: #42474c8c;
     }
+    &__feedback-mail:focus {
+        outline: none;
+    }
     &__feedback-button {
         // display: inline-flex;
         // align-items: center;
