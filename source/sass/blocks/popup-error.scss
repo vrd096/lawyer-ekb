@@ -1,0 +1,53 @@
+@import "../variables.scss";
+
+.popup-error {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 35px 100px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 10px 30px 10px #444;
+  &__text {
+    font-size: 20px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__close::before,
+  &__close::after {
+    content: " ";
+    position: absolute;
+    width: 28px;
+    height: 4px;
+    background-color: #444;
+    transition: background-color 0.3s;
+  }
+
+  &__close::before {
+    transform: rotate(45deg);
+  }
+
+  &__close::after {
+    transform: rotate(-45deg);
+  }
+
+  &__close:hover::before,
+  &__close:hover::after {
+    background-color: red;
+  }
+}

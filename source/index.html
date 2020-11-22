@@ -851,12 +851,13 @@
             внимание на недостатки, напишите нам. Мы гарантируем
             конфиденциальность ваших персональных данных.
           </p>
-          <form action="./mail.php" method="post">
+          <form class="footer__feedback-form" action="./mail.php" method="post">
             <input
               class="footer__feedback-mail"
               type="email"
               name="email"
               placeholder="Адрес электронной почты"
+              autocomplete="off"
               required
             />
             <button class="footer__feedback-button" type="submit">
@@ -882,7 +883,14 @@
         <p>Авторские права © 2020. Все права защищены.</p>
       </div>
     </footer>
-    <div class="modal-phone">
+    <div class="popup-error visually-hidden">
+      <img class="popup-error__picture" src="img/error-load.svg" alt="Ошибка загрузки" width="70" height="70">
+      <p class="popup-error__text">
+
+      </p>
+      <button class="popup-error__close" type="button">Закрыть</button>
+    </div>
+    <!-- <div class="modal-phone">
       <a href="tel:+79221962617">+7-922-196-26-17</a>
       <svg
         version="1.1"
@@ -931,7 +939,7 @@
           </g>
         </g>
       </svg>
-    </div>
+    </div> -->
     <!-- header -->
     <script src="js/header-slider.js"></script>
     <script src="js/burger-menu.js"></script>
@@ -940,6 +948,7 @@
     <!-- practice -->
     <script src="js/glide.min.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/form.js"></script>
     <!-- practice -->
   </body>
 </html>
