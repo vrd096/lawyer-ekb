@@ -28,7 +28,7 @@
   }
 
   function openError() {
-    popupError.classList.remove("hidden");
+    popupError.classList.remove("visually-hidden");
 
     popupError
       .querySelector(".popup-error__close")
