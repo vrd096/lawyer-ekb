@@ -122,10 +122,10 @@
             <li class="nav__item"><a href="#">O нас</a></li>
             <li class="nav__item"><a href="#">Контакты</a></li>
           </ul>
-          <a class="nav__consultation"
+          <button class="nav__consultation" type="button"
             >Консультация
             <span></span>
-          </a>
+          </button>
         </div>
       </nav>
 
@@ -847,7 +847,7 @@
         </div>
         <div class="footer__feedback">
           <p class="footer__feedback-text">
-            Не можете дозвониться? Оставьте свой номер телефона и мы к вам
+            Не можете дозвониться? Оставьте свой номер телефона и мы вам
             перезвоним
           </p>
           <form class="footer__feedback-form" action="./mail.php" method="post">
@@ -894,6 +894,53 @@
       />
       <p class="popup-error__text"></p>
       <button class="popup-error__close" type="button">Закрыть</button>
+    </div>
+
+    <div class="modal-send visually-hidden">
+      <h2 class="modal-send__title">Не дозвонились? Мы перезвоним</h2>
+      <form
+        class="modal-send__form"
+        method="post"
+        action="./mail.php"
+        enctype="multipart/form-data"
+        autocomplete="off"
+      >
+        <div class="modal-send__inner">
+          <label class="modal-send__labels">
+            Ваше имя:
+            <br />
+            <input
+              class="modal-send__input modal-send__input--form-name"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Как к Вам обращаться?"
+              required
+              autofocus
+              autocomplete="off"
+            />
+          </label>
+     
+        </div>
+        <label class="modal-send__labels">
+          Номер телефона:
+          <br />
+          <input
+            class="modal-send__input"
+            type="tel"
+            name="tel"
+            id="tel"
+            placeholder="Номер телефона"
+            autocomplete="off"
+          ></input>
+        </label>
+        <input
+          class="modal-send__button button"
+          type="submit"
+          value="Отправить"
+        />
+      </form>
+      <button class="modal-send__close" type="button">Закрыть</button>
     </div>
     <!-- <div class="modal-phone">
       <a href="tel:+79221962617">+7-922-196-26-17</a>
@@ -955,6 +1002,7 @@
     <script src="js/slider.js"></script>
     <script src="js/form.js"></script>
     <script src="js/backend.js"></script>
+    <script src="js/modal-form.js"></script>
     <!-- practice -->
   </body>
 </html>
