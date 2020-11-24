@@ -850,7 +850,7 @@
             Не можете дозвониться? Оставьте свой номер телефона и мы вам
             перезвоним
           </p>
-          <form class="footer__feedback-form" action="./mail.php" method="post">
+          <form class="footer__feedback-form form-js" action="./mail.php" method="post">
             <input
               class="footer__feedback-mail"
               type="tel"
@@ -899,7 +899,7 @@
     <div class="modal-send visually-hidden">
       <h2 class="modal-send__title">Не дозвонились? Мы перезвоним</h2>
       <form
-        class="modal-send__form"
+        class="modal-send__form form-js"
         method="post"
         action="./mail.php"
         enctype="multipart/form-data"
@@ -934,11 +934,25 @@
             autocomplete="off"
           ></input>
         </label>
-        <input
-          class="modal-send__button button"
+        <button 
+          class="modal-send__button"
           type="submit"
-          value="Отправить"
+        >
+        <svg
+        id="Capa_1"
+        enable-background="new 0 0 479.058 479.058"
+        viewBox="0 0 479.058 479.058"
+        xmlns="http://www.w3.org/2000/svg"
+        width="16px"
+        height="16px"
+        stroke="#fff"
+        stroke-width="2"
+      >
+        <path
+          d="m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
         />
+      </svg>
+      </button>
       </form>
       <button class="modal-send__close" type="button">Закрыть</button>
     </div>
@@ -992,6 +1006,7 @@
         </g>
       </svg>
     </div> -->
+    <div class="modal-overlay visually-hidden"></div>
     <!-- header -->
     <script src="js/header-slider.js"></script>
     <script src="js/burger-menu.js"></script>

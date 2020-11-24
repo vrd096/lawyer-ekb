@@ -1,138 +1,135 @@
 @import "../variables.scss";
 
-
 @media (min-width: 320px) {
-    .modal-send {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 10;
-      display: block;
-      background-color: #fff;
-      box-shadow: 0px 30px 30px 0px #444;
-    }
-
-    // .modal-send__title {
-    //   padding: 20px;
-    //   font-size: 35px;
-    //   line-height: 0;
-    //   color: #000;
-    //   margin-bottom: 45px;
-    // }
-    .modal-send__form {
-      padding: 20px;
-    }
-    .modal-send__inner {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .modal-send__labels {
-      width: 100%;
-      display: block;
-      font-size: 18px;
-      font-family: $playfair;
-      font-weight: bold;
-      color: $light-grey;
-    }
-    .modal-send__input {
-      width: 100%;
-      margin-top: 10px;
-      margin-bottom: 35px;
-      padding: 15px;
-      font-size: 16px;
-      color: #444;
-      border: 2px solid $gold;
-      border-radius: 3px;
-      outline: none;
-      transition: border-color 0.3s;
-    }
-    .modal-send__input:active {
-      border-color:$gold;
-    }
-    .modal-send__input:focus {
-      border-color:$gold;
-    }
-
-    .modal-send__input::placeholder {
-      color: #b1b1b1;
-    }
-    .modal-send__close {
-      position: absolute;
-      top: 13%;
-      right: 10%;
-      width: 20px;
-      height: 20px;
-      font-size: 0;
-      background-color: transparent;
-      border: 0;
-      cursor: pointer;
-      outline: none;
-    }
-    .modal-send__close::before, .modal-send__close::after {
-      content: " ";
-      position: absolute;
-      width: 28px;
-      height: 4px;
-      background-color: $gold;
-      transition: background-color 0.3s;
-    }
-    .modal-send__close::before {
-      transform: rotate(45deg);
-    }
-    .modal-send__close::after {
-      transform: rotate(-45deg);
-    }
-    .modal-send__close:hover:before, .modal-send__close:hover:after {
-      background-color: $gold;
-    }
-    .modal-send__close:focus:before, .modal-send__close:focus:after {
-      background-color: $gold;
-    }
-    .modal-send__close:active:before, .modal-send__close:active:after {
-      background-color: #ffeeee;
-    }
+  .modal-send {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: block;
+    background-color: #fff;
+    box-shadow: 0px 30px 30px 0px #444;
   }
-  
-  @media(min-width: 768px) {
-    .modal-send {
-      left: 50%;
-      bottom: 30%;
-      transform: translateX(-50%);
-      width: auto;
-    }
-    .modal-send__close {
-      top: 7%;
-      right: 9%;
-    }
+
+  // .modal-send__title {
+  //   padding: 20px;
+  //   font-size: 35px;
+  //   line-height: 0;
+  //   color: #000;
+  //   margin-bottom: 45px;
+  // }
+  .modal-send__form {
+    padding: 20px;
   }
-  
-  @media(min-width: 1200px) {
-    .modal-send {
-      bottom: 180px;
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 50px 100px 83px;
-    }
-    // .modal-send__title {
-    //   padding: 0;
-    //   font-size: 45px;
-    //   margin-bottom: 65px;
-    // }
-    .modal-send__form {
+  .modal-send__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .modal-send__labels {
+    width: 100%;
+    display: block;
+    font-size: 18px;
+    font-family: $playfair;
+    font-weight: bold;
+    color: $light-grey;
+  }
+  .modal-send__input {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    padding: 15px;
+    font-size: 16px;
+    color: #444;
+    border: 2px solid $gold;
+    border-radius: 3px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .modal-send__input:active {
+    border-color: $gold;
+  }
+  .modal-send__input:focus {
+    border-color: $gold;
+  }
+
+  .modal-send__input::placeholder {
+    color: #b1b1b1;
+  }
+  .modal-send__close {
+    position: absolute;
+    top: 13%;
+    right: 10%;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+  }
+  .modal-send__close::before,
+  .modal-send__close::after {
+    content: " ";
+    position: absolute;
+    width: 28px;
+    height: 4px;
+    background-color: $gold;
+    transition: background-color 0.3s;
+  }
+  .modal-send__close::before {
+    transform: rotate(45deg);
+  }
+  .modal-send__close::after {
+    transform: rotate(-45deg);
+  }
+  .modal-send__close:hover:before,
+  .modal-send__close:hover:after {
+    background-color: $gold;
+  }
+  .modal-send__close:focus:before,
+  .modal-send__close:focus:after {
+    background-color: $gold;
+  }
+  .modal-send__close:active:before,
+  .modal-send__close:active:after {
+    background-color: #ffeeee;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-send {
+    left: 50%;
+    bottom: 30%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+  .modal-send__close {
+    top: 7%;
+    right: 9%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-send {
+    bottom: 180px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 100px 83px;
+    &__form {
       width: 100%;
       padding: 0;
     }
-    .modal-send__inner {
-      margin-top: 30px;  
+    &__inner {
+      margin-top: 30px;
       flex-wrap: nowrap;
     }
-    .modal-send__labels {
+    &__labels {
       /* max-width: 360px; */
       display: inline-block;
     }
 
-    .modal-send__input {
+    &__input {
       /* max-width: 360px; */
       margin-top: 10px;
       margin-bottom: 35px;
@@ -144,14 +141,33 @@
       outline: none;
       transition: border-color 0.3s;
     }
-    .modal-send__button {
+    &__button {
       padding: 15px 85px;
+      margin-top: 20px;
+      font-size: 15px;
+      color: $white;
+      border: none;
+      outline: none;
+      background-color: $gold;
+      transition: background-color 0.3s;
+      svg {
+        width: 18px;
+        height: 18px;
+        fill: $white;
+      }
     }
-    .modal-send__close {
+    &__button:active {
+      background-color: #c2ba9a;
+    }
+    &__button:hover {
+      background-color: #cfb85a;
+    }
+    &__close {
       top: 13%;
       right: 11%;
     }
-    .modal-send__close::before, .modal-send__close::after {
+    &__close::before,
+    &__close::after {
       content: " ";
       position: absolute;
       width: 28px;
@@ -159,19 +175,31 @@
       background-color: #c2ba9a;
       transition: background-color 0.3s;
     }
-    .modal-send__close::before {
+    &__close::before {
       transform: rotate(45deg);
     }
-    .modal-send__close::after {
+    &__close::after {
       transform: rotate(-45deg);
     }
-    .modal-send__close:hover:before, .modal-send__close:hover:after {
+    &__close:hover:before,
+    &__close:hover:after {
+      background-color: #cfb85a;
+    }
+    &__close:focus:before,
+    &__close:focus:after {
       background-color: $gold;
     }
-    .modal-send__close:focus:before, .modal-send__close:focus:after {
-      background-color: $gold;
-    }
-    .modal-send__close:active:before, .modal-send__close:active:after {
+    &__close:active:before,
+    &__close:active:after {
       background-color: $gold;
     }
   }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+}

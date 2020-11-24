@@ -2,11 +2,11 @@
 
 (function() {
 
-  var formUpload = document.querySelector(".footer__feedback-form");
+  var formUpload = document.querySelectorAll(".form-js");
   var popupError = document.querySelector(".popup-error");
   var popupErrorText = document.querySelector(".popup-error__text");
   var ESC_KEYCODE = 27;
-
+  console.log(formUpload);
  
   function resetForm() {
     formUpload.reset();
