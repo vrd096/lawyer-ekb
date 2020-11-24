@@ -2,14 +2,16 @@
 
 (function() {
 
-  var formUpload = document.querySelectorAll(".form-js");
+  var formUpload = document.querySelector(".footer__feedback-form");
+  var formConsul = document.querySelector(".modal-send__form");
   var popupError = document.querySelector(".popup-error");
   var popupErrorText = document.querySelector(".popup-error__text");
   var ESC_KEYCODE = 27;
-  console.log(formUpload);
+
  
   function resetForm() {
     formUpload.reset();
+    formConsul.reset();
   }
 
   function handleEsq({ keyCode }) {
@@ -65,6 +67,10 @@
 
   formUpload.addEventListener("submit", function onFormSubmit(evt) {
     window.saveForm(new FormData(formUpload), resetForm, errorHandler);
+    evt.preventDefault();
+  });
+  formConsul.addEventListener("submit", function onFormSubmit(evt) {
+    window.saveForm(new FormData(formConsul), resetForm, errorHandler);
     evt.preventDefault();
   });
 })();
