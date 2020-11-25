@@ -1,12 +1,12 @@
 "use strict";
 
 (function() {
-
-  var formUpload = document.querySelector(".footer__feedback-form");
-  var formConsul = document.querySelector(".modal-send__form");
-  var popupError = document.querySelector(".popup-error");
-  var popupErrorText = document.querySelector(".popup-error__text");
-  var ESC_KEYCODE = 27;
+  let modelSend = document.querySelector(".modal-send");
+  let formUpload = document.querySelector(".footer__feedback-form");
+  let formConsul = document.querySelector(".modal-send__form");
+  let popupError = document.querySelector(".popup-error");
+  let popupErrorText = document.querySelector(".popup-error__text");
+  let ESC_KEYCODE = 27;
 
  
   function resetForm() {
@@ -48,11 +48,11 @@
 
     if (error.status === 400) {
       error.response.forEach(function(field) {
-        var fieldEl = document.getElementById(field.fieldName);
+        let fieldEl = document.getElementById(field.fieldName);
         fieldEl.style = "border: 1px solid red";
       });
 
-      var messages = error.response
+      let messages = error.response
         .map(
           ({ fieldName, errorMessage }) =>
             `${translate(fieldName)}: ${translate(errorMessage)}`
@@ -64,6 +64,9 @@
 
     openError();
   }
+  function closeConsul() {
+    modelSend.classList.add("visually-hidden");
+  }
 
   formUpload.addEventListener("submit", function onFormSubmit(evt) {
     window.saveForm(new FormData(formUpload), resetForm, errorHandler);
@@ -72,5 +75,6 @@
   formConsul.addEventListener("submit", function onFormSubmit(evt) {
     window.saveForm(new FormData(formConsul), resetForm, errorHandler);
     evt.preventDefault();
+    closeConsul();
   });
 })();
