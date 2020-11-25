@@ -48,6 +48,6 @@
 
   &__close:hover::before,
   &__close:hover::after {
-    background-color: red;
+    background-color: $gold;
   }
 }
