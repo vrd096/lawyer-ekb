@@ -64,9 +64,9 @@
 
     openError();
   }
-  function closeConsul() {
-    modelSend.classList.add("visually-hidden");
-  }
+  // function closeConsul() {
+  //   modelSend.classList.add("visually-hidden");
+  // }
 
   formUpload.addEventListener("submit", function onFormSubmit(evt) {
     window.saveForm(new FormData(formUpload), resetForm, errorHandler);
@@ -74,7 +74,7 @@
   });
   formConsul.addEventListener("submit", function onFormSubmit(evt) {
     window.saveForm(new FormData(formConsul), resetForm, errorHandler);
+    window.closeModal();
     evt.preventDefault();
-    closeConsul();
   });
 })();

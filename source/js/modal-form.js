@@ -7,7 +7,7 @@
   let modalClose = document.querySelector(".modal-send__close");
   const ESC_KEYCODE = 27;
 
-  function closeModal (){
+  window.closeModal = function closeModal (){
     modelSend.classList.add("visually-hidden");
     modelOverlay.classList.add("visually-hidden");
 
@@ -26,7 +26,7 @@
       closeModal();
     }
   }
-
+  
   contactButton.addEventListener("click", showModal);
   modalClose.addEventListener("click", closeModal);
 })();
