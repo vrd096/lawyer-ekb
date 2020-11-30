@@ -1,0 +1,36 @@
+"use strict";
+
+(function() {
+
+
+  window.saveForm = function(data, onLoad, onError) {
+    var URL = "./mail.php";
+    var xhr = new XMLHttpRequest();
+    xhr.responseType = "json";
+
+    xhr.addEventListener("load", function() {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        onLoad(xhr.response);
+      } else {
+        var error = new Error("Ошибка " + xhr.status);
+        error.response = xhr.response;
+        error.status = xhr.status;
+        onError(error);
+      }
+    });
+
+    xhr.addEventListener("error", function() {
+      onError(new Error("Произошла ошибка соеденения"));
+    });
+
+    xhr.addEventListener("timeout", function() {
+      onError(new Error("Долго ожидание от сервера"));
+    });
+
+    xhr.timeout = 10000;
+
+    xhr.open("POST", URL);
+    console.log(data);
+    xhr.send(data);
+  };
+})();

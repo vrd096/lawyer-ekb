@@ -65,6 +65,7 @@
     &__feedback-mail {
         display: inline;
         width: 70%;
+        height: 55px;
         padding: 20px 30px;
         margin: 0;
         vertical-align: middle;
@@ -83,9 +84,9 @@
         // align-items: center;
         // justify-content: center;
         // width: 70px;
-        // height: 55px;
+        height: 55px;
         vertical-align: middle;
-        margin-left: -4px;
+        margin-left: -5px;
         padding: 18px 20px;
         background-color: $gold;
         border: none;
