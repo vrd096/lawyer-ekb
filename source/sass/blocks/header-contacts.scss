@@ -174,11 +174,29 @@
     }
     &-title {
       display: block;
+      margin: 0 auto;
       font-family: $playfair;
       font-size: 46px;
       overflow: hidden;
       transform: translateX(0);
       transition: transform 1.5s ease;
+    }
+    &-breadcrombs {
+      display: flex;
+      align-items: center;
+      a {
+        margin-right: 10px;
+        color: rgb(223, 223, 223);
+        text-transform: none;
+        transition: color 0.3s;
+      }
+      a:hover {
+        color: $white;
+      }
+      p {
+        display: inline;
+        margin-left: 10px;
+      }
     }
     &-line {
       display: block;
