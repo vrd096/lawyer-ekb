@@ -196,6 +196,7 @@
       p {
         display: inline;
         margin-left: 10px;
+        font-weight: 600;
       }
     }
     &-line {
@@ -249,15 +250,9 @@
     &-container {
       margin-top: 200px;
     }
-    &-title {
-      font-size: 9px;
-      letter-spacing: 2px;
-    }
+
     &-line {
       width: 155px;
-    }
-    &-subtitle {
-      font-size: 42px;
     }
   }
   .nav__logo p {
@@ -288,15 +283,9 @@
     &-container {
       margin-top: 250px;
     }
-    &-title {
-      font-size: 12px;
-      letter-spacing: 3px;
-    }
+
     &-line {
       width: 210px;
-    }
-    &-subtitle {
-      font-size: 56px;
     }
   }
 }
@@ -485,14 +474,8 @@
         margin-top: 356px;
       }
     }
-    &-title {
-      font-size: 14px;
-    }
     &-line {
       width: 230px;
-    }
-    &-subtitle {
-      font-size: 64px;
     }
   }
 }
