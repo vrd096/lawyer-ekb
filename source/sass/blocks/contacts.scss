@@ -52,7 +52,18 @@
         font-family: $playfair;
         font-size: 18px;
       }
+      span {
+        font-weight: 600;
+        color: $light-grey;
+      }
     }
+    &__map {
+      margin-top: 50px;
+      width: 100%;
+    }
+  }
+  .footer {
+    margin-top: -100px;
   }
 }
 
@@ -115,6 +126,19 @@
     }
     &-map {
       margin-top: 20px;
+    }
+  }
+  .contact-info {
+    margin-top: 120px;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__inner {
+      margin-right: 50px;
+    }
+    &__description {
+      max-width: 450px;
     }
   }
 }
