@@ -1,0 +1,144 @@
+@import "../variables.scss";
+
+@media (min-width: 320px) {
+  .contacts-features {
+    &__list {
+      position: relative;
+      top: -200px;
+      background-color: transparent;
+    }
+    &__item {
+      max-height: 195px;
+      padding: 10px 30px 40px;
+      background-color: $white;
+      box-shadow: 0px 0px 30px rgba(15, 8, 49, 0.1);
+
+      &-title {
+        margin-bottom: 10px;
+        font-size: 25px;
+        font-weight: 400;
+        font-family: $playfair;
+        color: $light-grey;
+      }
+      &-subtitle {
+        margin-bottom: 30px;
+      }
+      a {
+        color: $light-grey;
+        text-transform: none;
+      }
+    }
+    &__item--gold {
+      background-color: $gold;
+      svg {
+        fill: $white;
+      }
+      .contacts-features__item-title {
+        color: $white;
+      }
+      .contacts-features__item-subtitle {
+        color: $white;
+      }
+    }
+  }
+  .contact-info {
+    transform: translateY(-150px);
+    &__description {
+      margin-top: 30px;
+    }
+    &__item {
+      margin-top: 35px;
+      &-title {
+        font-family: $playfair;
+        font-size: 18px;
+      }
+      span {
+        font-weight: 600;
+        color: $light-grey;
+      }
+    }
+    &__map {
+      margin-top: 50px;
+      width: 100%;
+    }
+  }
+  .footer {
+    margin-top: -100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts-features__list {
+    display: flex;
+  }
+  .contacts-features__item {
+    max-width: 33.33%;
+    min-height: 270px;
+    padding: 40px 30px 30px;
+    border: 0;
+
+    &-title {
+      margin-top: 23px;
+    }
+    &-subtitle {
+      margin-top: 5px;
+    }
+  }
+  .contacts-features__item:nth-child(2) {
+    border-right: 2px solid #f8f8f8;
+  }
+}
+@media (min-width: 1024px) {
+  .contacts-features__item {
+    // max-width: 33.33%;
+    padding: 50px 80px 20px 60px;
+    border: 0;
+    svg {
+      width: 64px;
+    }
+    &-title {
+      margin-top: 25px;
+      &::after {
+        margin-top: 20px;
+      }
+    }
+    &-subtitle {
+      margin-top: 23px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .contacts-features__list {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    top: -100px;
+  }
+  .contacts-features__item {
+    width: 33.33%;
+    padding: 50px auto;
+    min-height: 215px;
+    &-title {
+      margin: 0 auto;
+    }
+    &-subtitle {
+      margin-top: 5px;
+    }
+    &-map {
+      margin-top: 20px;
+    }
+  }
+  .contact-info {
+    margin-top: 120px;
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__inner {
+      margin-right: 50px;
+    }
+    &__description {
+      max-width: 450px;
+    }
+  }
+}
