@@ -4,7 +4,7 @@
   .about-us {
     padding-top: 70px;
     &__item {
-        margin-bottom: 100px;
+      margin-bottom: 100px;
     }
     &__image {
       width: 100%;
@@ -79,6 +79,25 @@
       a {
         font-weight: 400;
       }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about-us {
+    &__inner {
+      text-align: center;
+    }
+    &__image {
+      width: 80%;
+      margin: 0 auto;
+    }
+    &__title {
+      font-size: 24px;
+      text-align: left;
+    }
+    &__subtitle {
+      text-align: left;
     }
   }
 }
