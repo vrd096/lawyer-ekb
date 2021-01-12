@@ -101,3 +101,18 @@
     }
   }
 }
+@media (min-width: 1024px) {
+  .about-us {
+    &__item {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__inner {
+      width: 100%;
+      padding: 0;
+    }
+    &__title {
+      margin: 0;
+    }
+  }
+}
