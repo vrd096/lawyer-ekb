@@ -1,0 +1,47 @@
+@import "../variables.scss";
+
+@media (min-width: 320px) {
+  .price {
+    padding: 50px 0;
+    &__list {
+      margin-top: 50px;
+    }
+    &__item {
+      &-title {
+        padding: 20px;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: 1px solid #d2d2d2;
+        box-shadow: 0 10px 9px -1px #d2d2d2;
+      }
+    }
+    &__activiti-list {
+      //   display: none;
+    }
+    &__activiti-item {
+      padding: 10px 15px;
+      margin-top: 10px;
+      border: 1px solid #d2d2d2;
+      box-shadow: 0 5px 4px -1px #d2d2d2;
+    }
+    &__activiti-text {
+      font-size: 15px;
+      line-height: 1.5;
+      span {
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+    &__activiti-button {
+      padding: 10px 20px;
+      font-size: 12px;
+      font-weight: 600;
+      color: $white;
+      background-color: $gold;
+      border: none;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+  }
+}
