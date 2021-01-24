@@ -45,6 +45,15 @@
       outline: none;
       border-radius: 3px;
       text-transform: uppercase;
+      a {
+        color: $white;
+      }
+      &--mobile {
+        display: inline;
+      }
+      &--laptop {
+        display: none;
+      }
     }
   }
   .price__item-active .price__item-title {
@@ -72,6 +81,12 @@
   }
   .price__specialty-button {
     height: 36px;
+    &--mobile {
+      display: none;
+    }
+    &--laptop {
+      display: inline;
+    }
   }
 }
 
