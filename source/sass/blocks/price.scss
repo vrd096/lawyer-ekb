@@ -6,6 +6,9 @@
     &__list {
       margin-top: 50px;
     }
+    &__subtitle {
+      font-size: 22px;
+    }
     &__item-title {
       padding: 20px;
       font-size: 16px;
@@ -68,15 +71,22 @@
 }
 
 @media (min-width: 1024px) {
+  .price__subtitle {
+    font-size: 38px;
+  }
   .price__specialty-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .price__specialty-text {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
     span {
       display: inline;
-      margin-left: 50px;
+      width: 30%;
+      text-align: right;
     }
   }
   .price__specialty-button {
@@ -95,5 +105,8 @@
     span {
       margin-left: 100px;
     }
+  }
+  .price__item-title:hover {
+    cursor: pointer;
   }
 }
