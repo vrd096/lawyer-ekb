@@ -29,7 +29,8 @@
       font-size: 15px;
       line-height: 1.5;
       span {
-        font-size: 15px;
+        display: block;
+        font-size: 14px;
         font-weight: 600;
         text-transform: uppercase;
       }
@@ -41,6 +42,7 @@
       color: $white;
       background-color: $gold;
       border: none;
+      outline: none;
       border-radius: 3px;
       text-transform: uppercase;
     }
@@ -53,5 +55,30 @@
     height: auto;
     opacity: 1;
     transition: height 0ms 0ms, opacity 600ms 0ms;
+  }
+}
+
+@media (min-width: 1024px) {
+  .price__specialty-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .price__specialty-text {
+    span {
+      display: inline;
+      margin-left: 50px;
+    }
+  }
+  .price__specialty-button {
+    height: 36px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .price__specialty-text {
+    span {
+      margin-left: 100px;
+    }
   }
 }

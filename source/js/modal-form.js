@@ -1,18 +1,18 @@
 "use strict";
 
-(function() {
+(function () {
   let modelSend = document.querySelector(".modal-send");
   let modelOverlay = document.querySelector(".modal-overlay");
-  let contactButton = document.querySelector(".nav__consultation");
+  let contactButtons = document.querySelectorAll(".js-consultation");
   let modalClose = document.querySelector(".modal-send__close");
   const ESC_KEYCODE = 27;
 
-  window.closeModal = function closeModal (){
+  window.closeModal = function closeModal() {
     modelSend.classList.add("visually-hidden");
     modelOverlay.classList.add("visually-hidden");
 
     document.removeEventListener("keyup", handleCardEsc);
-  }
+  };
 
   function showModal() {
     modelSend.classList.remove("visually-hidden");
@@ -26,7 +26,8 @@
       closeModal();
     }
   }
-  
-  contactButton.addEventListener("click", showModal);
+  console.log(contactButtons);
+  contactButtons.forEach((item) => item.addEventListener("click", showModal));
+
   modalClose.addEventListener("click", closeModal);
 })();
