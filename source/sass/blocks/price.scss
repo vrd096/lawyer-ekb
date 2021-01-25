@@ -1,6 +1,29 @@
 @import "../variables.scss";
 
 @media (min-width: 320px) {
+  .header__hero {
+    &-container {
+      margin-top: 10px;
+    }
+    &-subtitle {
+      color: $gold;
+    }
+    &-futures {
+      // margin-top: 50px;
+    }
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      font-size: 16px;
+      // margin-bottom: 10px;
+      img {
+        margin-right: 15px;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
   .price {
     padding: 50px 0;
     &__list {
@@ -70,7 +93,57 @@
   }
 }
 
+@media (min-width: 320px) and (min-height: 620px) {
+  .header__hero {
+    &-container {
+      margin-top: 20px;
+    }
+    &-subtitle {
+      color: $gold;
+    }
+    &-futures {
+      margin-top: 50px;
+    }
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      font-size: 16px;
+      margin-bottom: 20px;
+      img {
+        margin-right: 15px;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
 @media (min-width: 1024px) {
+  .header__hero {
+    &-container {
+      margin-top: 70px;
+    }
+    &-subtitle {
+      color: $gold;
+    }
+    &-futures {
+      margin-top: 100px;
+    }
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      font-size: 18px;
+      margin-bottom: 30px;
+      img {
+        margin-right: 30px;
+      }
+      p {
+        margin: 0;
+        font-size: 20px;
+      }
+    }
+  }
   .price__subtitle {
     font-size: 38px;
   }
